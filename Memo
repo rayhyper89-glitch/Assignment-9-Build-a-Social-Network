@@ -1,0 +1,34 @@
+"""
+Design Memo:
+
+A graph is the right data structure for representing a social
+network because people can have connections with many different
+individuals. Each person represents a node, and each friendship
+represents an edge connecting two nodes. An adjacency list works
+well because it stores each person's friends directly in a list.
+This makes it easy to add friendships and see who is connected.
+
+A regular list would not work as well because it would be harder
+to organize and track relationships between multiple people.
+A tree would also be less appropriate because trees generally
+follow a parent-child structure, while social networks allow
+people to have multiple connections without a strict hierarchy.
+
+One performance advantage of using a dictionary is that finding
+a person by name takes approximately O(1) average time. Adding
+a friendship requires adding each person to the other's friends
+list. This takes O(1) time on average when appending to a list,
+although checking for an existing friendship takes O(d), where
+d is the person's number of friends.
+
+Printing the network takes O(V + E) time because the program
+must visit every person and display their friendships. The main
+trade-off is that adjacency lists use less memory than adjacency
+matrices when a network has relatively few connections. However,
+checking whether two specific people are friends requires
+searching through a person's friends list.
+
+Overall, an adjacency list provides a simple and efficient way
+to represent a social network that can grow as more people
+and friendships are added.
+"""
